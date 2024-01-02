@@ -36,7 +36,7 @@ function App() {
             <td>Ali</td>
             <td>23</td>
             <td>sahiwal</td>
-            <td><button >click</button></td>
+            <td><button>click</button></td>
           </tbody>
         </table>
       </header>
