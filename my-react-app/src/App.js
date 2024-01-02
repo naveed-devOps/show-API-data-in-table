@@ -27,15 +27,15 @@ function App() {
           <tbody>
             <td>2</td>
             <td>Ahmad</td>
-            <td>23</td>
-            <td>sahiwal</td>
+            <td>24</td>
+            <td>okkara</td>
             <td><button>click</button></td>
           </tbody>
           <tbody>
             <td>3</td>
             <td>Ali</td>
-            <td>23</td>
-            <td>sahiwal</td>
+            <td>25</td>
+            <td>chichawatni</td>
             <td><button>click</button></td>
           </tbody>
         </table>
