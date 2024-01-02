@@ -3,32 +3,19 @@ import './App.css';
 
 function App() {
   // Define the function outside JSX
-  function btn1() {
-    var id = document.getElementById('1').textContent;
-    var name = document.getElementById('2').textContent;
-    var age = document.getElementById('3').textContent;
-    var city = document.getElementById('4').textContent;
-  
-    alert('Row one data: ' + id + " " + name + " " + age + " "  + city);
-  };
-  
-  function btn2() {
-    var id = document.getElementById('5').textContent;
-    var name = document.getElementById('6').textContent;
-    var age = document.getElementById('7').textContent;
-    var city = document.getElementById('8').textContent;
-  
-    alert('Row two data: ' + id + " " + name + " " + age + " "  + city);
-  };
-  
-  function btn3() {
-    var id = document.getElementById('9').textContent;
-    var name = document.getElementById('10').textContent;
-    var age = document.getElementById('11').textContent;
-    var city = document.getElementById('12').textContent;
-  
-    alert('Row three data: ' + id + " " + name + " " + age + " "  + city);
-  };
+  function handleButtonClick(event) {
+    const row = event.currentTarget.parentElement.parentElement; // Get the parent row
+    const cells = row.children; // Get all cells in the row
+
+    const data = {
+      id: cells[0].textContent,
+      name: cells[1].textContent,
+      age: cells[2].textContent,
+      city: cells[3].textContent,
+    };
+
+    alert(`Row data: ${data.id} ${data.name} ${data.age} ${data.city}`);
+  }
 
   return (
     <div className="App">
@@ -46,25 +33,25 @@ function App() {
           </thead>
           <tbody>
             <tr>
-              <td id="1">1</td>
-              <td id="2">zain</td>
-              <td id="3">23</td>
-              <td id="4">sahiwal</td>
-              <td><button onClick={btn1}>click</button></td>
+              <td>1</td>
+              <td>zain</td>
+              <td>23</td>
+              <td>sahiwal</td>
+              <td><button onClick={handleButtonClick}>click</button></td>
             </tr>
             <tr>
-              <td id="5">2</td>
-              <td id="6">Ahmad</td>
-              <td id="7">24</td>
-              <td id="8">okkara</td>
-              <td><button onClick={btn2}>click</button></td>
+              <td>2</td>
+              <td>Ahmad</td>
+              <td>24</td>
+              <td>okkara</td>
+              <td><button onClick={handleButtonClick}>click</button></td>
             </tr>
             <tr>
-              <td id="9">3</td>
-              <td id="10">Ali</td>
-              <td id="11">25</td>
-              <td id="12">chichawatni</td>
-              <td><button onClick={btn3}>click</button></td>
+              <td>3</td>
+              <td>Ali</td>
+              <td>25</td>
+              <td>chichawatni</td>
+              <td><button onClick={handleButtonClick}>click</button></td>
             </tr>
           </tbody>
         </table>
